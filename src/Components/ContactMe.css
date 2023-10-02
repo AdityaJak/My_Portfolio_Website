@@ -1,0 +1,46 @@
+/* ContactMe.css */
+
+.contact-me {
+  padding: 40px;
+  background-color: #0a0a0a; 
+  text-align: center;
+}
+
+.contact-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-me h2 {
+  font-size: 2rem;
+  color: #00ffcc; 
+  margin-bottom: 20px;
+}
+
+.contact-me p {
+  font-size: 1.2rem;
+  color: #cccccc; 
+  line-height: 1.6;
+}
+
+.contact-me ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-me li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #cccccc; 
+}
+
+.contact-me a {
+  text-decoration: none;
+  color: #0074d9; 
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-me a:hover {
+  color: #0056b3; 
+}
+
