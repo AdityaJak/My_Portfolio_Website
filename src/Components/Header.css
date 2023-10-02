@@ -1,0 +1,35 @@
+/* Header.css */
+
+header {
+  background-color: #000; 
+  color: #00ffcc; 
+  padding: 20px 0;
+  text-align: center; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00ffcc; 
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  font-size: 18px; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+
+nav a:hover {
+  color: #007BFF; 
+  text-decoration: underline; 
+}
