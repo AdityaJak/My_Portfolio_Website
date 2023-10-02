@@ -59,8 +59,8 @@ Axios: HTTP client for making API requests
 
 If you'd like to contribute to this project, please follow these guidelines:
 
-Fork the repository.
-Create a new branch for your feature: git checkout -b feature-name
-Commit your changes: git commit -m 'Add a new feature'
-Push to your branch: git push origin feature-name
-Submit a pull request.
+1. Fork the repository.
+2. Create a new branch for your feature: git checkout -b feature-name.
+3. Commit your changes: git commit -m 'Add a new feature'.
+4. Push to your branch: git push origin feature-name.
+5. Submit a pull request.
