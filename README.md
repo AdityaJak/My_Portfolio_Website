@@ -22,6 +22,8 @@ Welcome to my portfolio website! This website showcases my work, skills, and pro
 
 ## Demo
 
+![Demo](public/demo.gif)
+
 You can visit the live demo of my portfolio website here: [Portfolio Website](https://www.example.com)
 
 ## Getting Started
