@@ -48,14 +48,14 @@ To set up this project locally, follow these steps:
 
 ## Usage
 
-Feel free to use this project as a template for your own portfolio website. You can customize the content, add your projects, and modify the design to suit your preferences. Make sure to replace the example content with your own information.
+- Feel free to use this project as a template for your own portfolio website. You can customize the content, add your projects, and modify the design to suit your preferences. Make sure to replace the example content with your own information.
 
 ## Technologies Used
 
-React.js: A JavaScript library for building user interfaces
-HTML/CSS: Markup and styling
-JavaScript: Programming language for interactivity
-Axios: HTTP client for making API requests
+- React.js: A JavaScript library for building user interfaces
+- HTML/CSS: Markup and styling
+- JavaScript: Programming language for interactivity
+- Axios: HTTP client for making API requests
 
 ## Contributing
 
