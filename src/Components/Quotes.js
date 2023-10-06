@@ -23,7 +23,7 @@ function Quotes() {
 
   return (
     <div className="quotes-container">
-      <h2>Random Quote</h2>
+      <h2>Quote</h2>
       <blockquote>
         <p className="quote-text">{quote}</p>
         <footer className="author-text">{author}</footer>
