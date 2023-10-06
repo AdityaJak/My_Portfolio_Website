@@ -36,7 +36,7 @@ To set up this project locally, follow these steps:
    git clone https://github.com/AdityaJak/Portfolio_Website.git
    
 2. Navigate to the project folder:
-   cd portfolio-website
+   cd Portfolio_Website
 
 3. Install the required dependencies:
    npm install
