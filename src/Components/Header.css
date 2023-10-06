@@ -1,5 +1,6 @@
 /* Header.css */
 
+/* Common styles for both mobile and desktop */
 header {
   background-color: #000; 
   color: #00ffcc; 
@@ -16,7 +17,7 @@ nav ul {
 }
 
 nav li {
-  margin: 0 20px;
+  margin: 0 10px; /* Reduce margin for smaller screens */
 }
 
 nav a {
@@ -24,12 +25,34 @@ nav a {
   color: #00ffcc; 
   font-weight: bold;
   transition: color 0.3s ease-in-out;
-  font-size: 18px; 
+  font-size: 16px; /* Reduce font size for smaller screens */
   text-transform: uppercase; 
-  letter-spacing: 2px; 
+  letter-spacing: 1px; /* Reduce letter spacing for smaller screens */
 }
 
-nav a:hover {
-  color: #007BFF; 
-  text-decoration: underline; 
+/* Styles for mobile screens */
+@media (max-width: 767px) {
+  nav li {
+    margin: 0 8px; /* Further reduce margin for smaller screens */
+  }
+  
+  nav a {
+    font-size: 14px; /* Further reduce font size for smaller screens */
+  }
+}
+
+/* Styles for desktop screens */
+@media (min-width: 768px) {
+  header {
+    padding: 30px 0; /* Increase padding for desktop screens */
+  }
+
+  nav li {
+    margin: 0 20px; /* Restore margin for desktop screens */
+  }
+
+  nav a {
+    font-size: 18px; /* Restore font size for desktop screens */
+    letter-spacing: 2px; /* Restore letter spacing for desktop screens */
+  }
 }

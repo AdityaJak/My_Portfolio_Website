@@ -10,7 +10,7 @@ function GitHub() {
   useEffect(() => {
     // Fetch GitHub repositories using the GitHub REST API
     axios
-      .get('https://api.github.com/users/saimihirj/repos')
+      .get('https://api.github.com/users/AdityaJak/repos')
       .then((response) => {
         setRepos(response.data);
         setLoading(false);

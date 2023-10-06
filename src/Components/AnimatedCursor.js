@@ -76,8 +76,6 @@ function useEventListener(eventName, handler, element = document) {
  * Replaces the native cursor with a custom animated cursor, consisting
  * of an inner and outer dot that scale inversely based on hover or click.
  *
- * @author Stephen Scaff (github.com/stephenscaff)
- *
  * @param {string} color - rgb color value
  * @param {number} outerAlpha - level of alpha transparency for color
  * @param {number} innerSize - inner cursor size in px
@@ -92,7 +90,7 @@ function useEventListener(eventName, handler, element = document) {
 function CursorCore({
     outerStyle,
     innerStyle,
-    color = '220, 90, 90',
+    color = '0, 191, 255',
     outerAlpha = 0.3,
     innerSize = 8,
     outerSize = 8,

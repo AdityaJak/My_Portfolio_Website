@@ -1,29 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Weather.css';
+import MapChart from './MapChart';
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState([]);
   const API_KEY = '6e5b709dcbb79a3f741f83ec31953deb'; // Replace with your OpenWeatherMap API key
+  const isMobile = window.innerWidth <= 767; // Check if the screen width is less than or equal to 767px
 
-  // Define the cities array
+  // Define the cities array with the best states for software engineers
   const cities = [
-    { name: 'New York', id: 5128581, position: { top: '20%', left: '15%' } },
-    { name: 'Los Angeles', id: 5368361, position: { top: '45%', left: '10%' } },
-    { name: 'Chicago', id: 4887398, position: { top: '22%', left: '27%' } },
-    { name: 'Houston', id: 4699066, position: { top: '50%', left: '27%' } },
-    { name: 'Phoenix', id: 5308655, position: { top: '30%', left: '10%' } },
-    { name: 'Philadelphia', id: 4560349, position: { top: '25%', left: '22%' } },
-    { name: 'San Antonio', id: 4726206, position: { top: '52%', left: '32%' } },
-    { name: 'San Diego', id: 5391811, position: { top: '42%', left: '12%' } },
-    { name: 'Dallas', id: 4684888, position: { top: '38%', left: '35%' } },
-    { name: 'San Jose', id: 5392171, position: { top: '44%', left: '15%' } },
+    { name: 'California', id: 'CA' },
+    { name: 'Washington', id: 'WA' },
+    { name: 'Texas', id: 'TX' },
+    { name: 'New York', id: 'NY' },
+    { name: 'Massachusetts', id: 'MA' },
+    { name: 'North Carolina', id: 'NC' },
+    { name: 'Colorado', id: 'CO' },
+    { name: 'Utah', id: 'UT' },
+    { name: 'Virginia', id: 'VA' },
+    { name: 'Georgia', id: 'GA' },
+    { name: 'Oregon', id: 'OR' },
+    { name: 'Michigan', id: 'MI' },
   ];
 
   useEffect(() => {
     const requests = cities.map((cityInfo) =>
       axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?id=${cityInfo.id}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityInfo.name}&appid=${API_KEY}&units=metric`
       )
     );
 
@@ -31,7 +35,7 @@ const Weather = () => {
       .then((responses) => {
         const data = responses.map((response, index) => ({
           ...response.data,
-          position: cities[index].position,
+          id: cities[index].id,
         }));
         setWeatherData(data);
       })
@@ -45,17 +49,13 @@ const Weather = () => {
       return null;
     }
 
-    return weatherData.map((city) => (
-      <div
-        className="weather-card"
-        key={city.id}
-        style={{ top: city.position.top, left: city.position.left }}
-      >
-        <h3>{city.name}</h3>
-        <p>Temperature: {city.main.temp}°C</p>
-        <p>Condition: {city.weather[0].main}</p>
+    return weatherData.map((stateWeather) => (
+      <div className="weather-card" key={stateWeather.id}>
+        <h3>{stateWeather.name}</h3>
+        <p>Temperature: {stateWeather.main.temp}°C</p>
+        <p>Condition: {stateWeather.weather[0].main}</p>
         <p className="weather-suggestion">
-          {getWorkLocationSuggestion(city.weather[0].main)}
+          {getWorkLocationSuggestion(stateWeather.weather[0].main)}
         </p>
       </div>
     ));
@@ -77,24 +77,11 @@ const Weather = () => {
 
   return (
     <section className="weather-container">
-      <h2 className="weather-heading">Current Weather in the United States</h2>
+      <h2 className="weather-heading">Workplace Preference According To Weather Conditions</h2>
       <div className="weather-map">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Blank_US_Map_%28states_only%29.svg"
-          alt="United States Map"
-          className="us-map"
-        />
+        {/* Replace the map here */}
+        <MapChart />
         {renderWeatherInfo()}
-        {/* Placeholders */}
-        {cities.map((cityInfo) => (
-          <div
-            className="weather-placeholder"
-            key={cityInfo.id}
-            style={{ top: cityInfo.position.top, left: cityInfo.position.left }}
-          >
-            {cityInfo.name}
-          </div>
-        ))}
       </div>
     </section>
   );
