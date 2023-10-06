@@ -53,7 +53,7 @@ To set up this project locally, follow these steps:
 ## Technologies Used
 
 - React.js: A JavaScript library for building user interfaces
-- HTML/CSS: Markup and styling
+- CSS: Markup and styling
 - JavaScript: Programming language for interactivity
 - Axios: HTTP client for making API requests
 
