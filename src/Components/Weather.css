@@ -24,9 +24,132 @@
   height: auto;
 }
 
+/* Mobile Styles */
+@media (max-width: 766px) {
+  .mobile-text {
+    margin-bottom: 20px; /* Add spacing between text sections */
+  }
+
+  .mobile-text h3 {
+    font-size: 18px;
+    color: #333; /* Text color for mobile */
+  }
+
+  .mobile-text p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc; /* Light gray text color for mobile */
+  }
+
+  .mobile-text .weather-suggestion {
+    font-size: 14px;
+    font-style: italic;
+    color: #aaa; /* Lighter gray for suggestions on mobile */
+  }
+
+
+  .weather-card {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, z-index 0.2s ease-in-out;
+    cursor: pointer;
+    width: 200px;
+    z-index: 1; /* Initially set a higher z-index */
+    transform: scale(1);
+    margin: 10px; /* Add margin to separate cards on mobile */
+  }
+
+  .weather-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+    z-index: 2; /* Bring the hovered card to the front */
+  }
+
+  .weather-card h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #fff; /* White text color */
+  }
+
+  .weather-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc; /* Light gray text color */
+  }
+
+  .weather-suggestion {
+    font-size: 14px;
+    font-style: italic;
+    color: #aaa; /* Lighter gray for suggestions */
+  }
+}
+/* Randomly position all 12 cards */
+.weather-card:nth-child(2) {
+  top: 35%;
+  left: 6%;
+}
+
+.weather-card:nth-child(3) {
+  top: 2%; 
+  left: 12%; 
+}
+
+.weather-card:nth-child(4) {
+  top: 60%;
+  left: 45%;
+}
+
+.weather-card:nth-child(5) {
+  top: 20%;
+  left: 73%;
+}
+
+.weather-card:nth-child(6) {
+  top: 20%;
+  left: 78%;
+}
+
+.weather-card:nth-child(7) {
+  top: 45%;
+  left: 80%;
+}
+
+.weather-card:nth-child(8) {
+  top: 37%;
+  left: 32%;
+}
+
+.weather-card:nth-child(9) {
+  top: 35%;
+  left: 22%;
+}
+
+.weather-card:nth-child(10) {
+  top: 40%;
+  left: 83%;
+}
+
+.weather-card:nth-child(11) {
+  top: 55%;
+  left: 75%;
+}
+
+.weather-card:nth-child(12) {
+  top: 15%;
+  left: 10%;
+}
+
+.weather-card:nth-child(13) {
+  top: 25%;
+  left: 59%;
+}
+
 .weather-card {
   position: absolute;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -39,26 +162,26 @@
 
 .weather-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
   z-index: 2; /* Bring the hovered card to the front */
 }
 
 .weather-card h3 {
   font-size: 18px;
   margin: 0;
-  color: #333;
+  color: #fff; /* White text color */
 }
 
 .weather-card p {
   font-size: 14px;
   margin: 5px 0;
-  color: #777;
+  color: #ccc; /* Light gray text color */
 }
 
 .weather-suggestion {
   font-size: 14px;
   font-style: italic;
-  color: #555;
+  color: #aaa; /* Lighter gray for suggestions */
 }
 
 .weather-placeholder {
@@ -72,33 +195,24 @@
   font-size: 12px;
 }
 
-/* Increase the distance between weather cards */
-.weather-card:nth-child(1) {
-  top: 10%;
-  left: 10%;
+.weather-card {
+  border: 1px solid #00ff00; /* Green border */
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4); /* Green shadow on hover */
 }
 
-.weather-card:nth-child(2) {
-  top: 10%;
-  left: 40%;
+.weather-card h3 {
+  color: #00ff00; /* Green text color */
 }
 
-.weather-card:nth-child(3) {
-  top: 10%;
-  left: 70%;
+.weather-card p {
+  color: #00ff00; /* Green text color */
 }
 
-.weather-card:nth-child(4) {
-  top: 40%;
-  left: 10%;
+.weather-suggestion {
+  color: #00ff00; /* Green text color */
 }
 
-.weather-card:nth-child(5) {
-  top: 40%;
-  left: 40%;
-}
-
-.weather-card:nth-child(6) {
-  top: 40%;
-  left: 70%;
+.weather-card:hover {
+  border: 1px solid #00ff00; /* Green border on hover */
 }
