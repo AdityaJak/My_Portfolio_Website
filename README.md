@@ -22,7 +22,7 @@ Welcome to my portfolio website! This website showcases my work, skills, and pro
 
 ## Demo
 
-You can visit the live demo of my portfolio website here: [My Portfolio Website](https://www.example.com)
+You can visit the live demo of my portfolio website here: [Portfolio Website](https://www.example.com)
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ To set up this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/AdityaJak/my_Portfolio_Website.git
+   git clone https://github.com/AdityaJak/Portfolio_Website.git
    
 2. Navigate to the project folder:
    cd portfolio-website
